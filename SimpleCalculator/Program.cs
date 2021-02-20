@@ -57,17 +57,17 @@ namespace Calculator
         }
         //Substraction
         public static int Substraction(int input_1, int input_2) {
-            int result = input_1 + input_2;
+            int result = input_1 - input_2;
             return result;
         }
         //Multiplication
         public static int Multiplication(int input_1, int input_2) {
-            int result = input_1 + input_2;
+            int result = input_1 * input_2;
             return result;
         }
         //Division
         public static int Division(int input_1, int input_2) {
-            int result = input_1 + input_2;
+            int result = input_1 / input_2;
             return result;
         }
     }
