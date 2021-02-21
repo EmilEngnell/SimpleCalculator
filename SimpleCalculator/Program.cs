@@ -88,7 +88,7 @@ namespace Calculator
                     Console.WriteLine("Error! Infinity Guantlet required to divide by 0. Thanos is not amused!");
                 }
 
-                return result;
+                return result; 
             }
 
         }
