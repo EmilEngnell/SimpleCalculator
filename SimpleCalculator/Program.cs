@@ -19,56 +19,78 @@ namespace Calculator
             Console.WriteLine("3: Multiplication");
             Console.WriteLine("4: Division");
             Console.WriteLine("5: Exit");
-            int action = Convert.ToInt32(Console.ReadLine());
+            double action = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please, enter you first number:");
-            int input_1 = Convert.ToInt32(Console.ReadLine());
+            double input_1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please, enter your seccond number:");
-            int input_2 = Convert.ToInt32(Console.ReadLine());
-            int result = 0;
-            switch (action) {
-                case 1: {
-                    result = Addition(input_1, input_2);
-                    break;
-                } 
-                case 2: {
-                    result = Substraction(input_1, input_2);
-                    break;
-                }
-                case 3: {
-                    result = Multiplication(input_1, input_2);
-                    break;
-                }
-                case 4: {
-                    result = Division(input_1, input_2);
-                    break;
-                }
+            double input_2 = Convert.ToInt32(Console.ReadLine());
+            double result = 0;
+            switch (action)
+            {
+                case 1:
+                    {
+                        result = Addition(input_1, input_2);
+                        break;
+                    }
+                case 2:
+                    {
+                        result = Substraction(input_1, input_2);
+                        break;
+                    }
+                case 3:
+                    {
+                        result = Multiplication(input_1, input_2);
+                        break;
+                    }
+                case 4:
+                    {
+                        result = Division(input_1, input_2);
+                        break;
+                    }
                 default:
                     Console.WriteLine("Invalid entry");
                     break;
             }
-            Console.WriteLine(" = {0}",result);
+            Console.WriteLine(" = {0}", result);
             Console.ReadKey();
 
         }
         //Addition
-        public static int Addition(int input_1, int input_2) {
-            int result = input_1 + input_2;
+        public static double Addition(double input_1, double input_2)
+        {
+            double result = input_1 + input_2;
             return result;
         }
         //Substraction
-        public static int Substraction(int input_1, int input_2) {
-            int result = input_1 - input_2;
+        public static double Substraction(double input_1, double input_2)
+        {
+            double result = input_1 - input_2;
             return result;
         }
         //Multiplication
-        public static int Multiplication(int input_1, int input_2) {
-            int result = input_1 * input_2;
+        public static double Multiplication(double input_1, double input_2)
+        {
+            double result = input_1 * input_2;
             return result;
         }
         //Division
-        public static int Division(int input_1, int input_2) {
-            int result = input_1 / input_2;
-            return result;
+        public static double Division(double input_1, double input_2)
+        {
+            
+            {
+                double result = input_1 / input_2;
+                if (input_1 != 0)
+                {
+                    Console.WriteLine("Error! Infinity Guantlet required to divide by 0. Thanos is not amused!");
+                }
+                else if (input_2 != 0)
+                {
+                    Console.WriteLine("Error! Infinity Guantlet required to divide by 0. Thanos is not amused!");
+                }
+
+                return result;
+            }
+
         }
     }
 }
