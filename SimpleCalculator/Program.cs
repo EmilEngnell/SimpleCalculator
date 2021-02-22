@@ -10,50 +10,56 @@ namespace Calculator
         //Here is where the program starts
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Basic Calculator");//Just text,this will not b treated as code - notes for coder
-            Console.WriteLine(" ");
-            Console.WriteLine("What action would you like to perform?");
-            Console.WriteLine(" ");
-            Console.WriteLine("1: Addition");
-            Console.WriteLine("2: Substraction");
-            Console.WriteLine("3: Multiplication");
-            Console.WriteLine("4: Division");
-            Console.WriteLine("5: Exit");
-            double action = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please, enter you first number:");
-            double input_1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please, enter your seccond number:");
-            double input_2 = Convert.ToInt32(Console.ReadLine());
-            double result = 0;
-            switch (action)
-            {
-                case 1:
-                    {
-                        result = Addition(input_1, input_2);
-                        break;
-                    }
-                case 2:
-                    {
-                        result = Substraction(input_1, input_2);
-                        break;
-                    }
-                case 3:
-                    {
-                        result = Multiplication(input_1, input_2);
-                        break;
-                    }
-                case 4:
-                    {
-                        result = Division(input_1, input_2);
-                        break;
-                    }
-                default:
-                    Console.WriteLine("Invalid entry");
-                    break;
-            }
-            Console.WriteLine(" = {0}", result);
-            Console.ReadKey();
+            bool Alive = true;
 
+            while (Alive)
+            {
+
+
+                Console.WriteLine("Welcome to the Basic Calculator");//Just text,this will not b treated as code - notes for coder
+                Console.WriteLine(" ");
+                Console.WriteLine("What action would you like to perform?");
+                Console.WriteLine(" ");
+                Console.WriteLine("1: Addition");
+                Console.WriteLine("2: Substraction");
+                Console.WriteLine("3: Multiplication");
+                Console.WriteLine("4: Division");
+                double action = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Please, enter you first number:");
+                double input_1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Please, enter your seccond number:");
+                double input_2 = Convert.ToInt32(Console.ReadLine());
+                double result = 0;
+                switch (action)
+                {
+                    case 1:
+                        {
+                            result = Addition(input_1, input_2);
+                            break;
+                        }
+                    case 2:
+                        {
+                            result = Substraction(input_1, input_2);
+                            break;
+                        }
+                    case 3:
+                        {
+                            result = Multiplication(input_1, input_2);
+                            break;
+                        }
+                    case 4:
+                        {
+                            result = Division(input_1, input_2);
+                            break;
+                        }
+
+                    default:
+                        Console.WriteLine("I beg your pardon?");
+                        break;
+                }
+                Console.WriteLine(" = {0}", result);
+                Console.ReadKey();
+            }
         }
         //Addition
         public static double Addition(double input_1, double input_2)
@@ -76,20 +82,22 @@ namespace Calculator
         //Division
         public static double Division(double input_1, double input_2)
         {
-            
+
             {
                 double result = input_1 / input_2;
                 if (input_1 != 0)
                 {
-                    Console.WriteLine("Error! Infinity Guantlet required to divide by 0. Thanos is not amused!");
+
                 }
                 else if (input_2 != 0)
                 {
                     Console.WriteLine("Error! Infinity Guantlet required to divide by 0. Thanos is not amused!");
                 }
-                return result; 
+                return result;
             }
 
         }
-    }
+        
+        
+    } 
 }
