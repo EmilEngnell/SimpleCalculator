@@ -10,20 +10,18 @@ namespace Calculator
         //Here is where the program starts
         static void Main(string[] args)
         {
-            bool Alive = true;
+            bool alive = true;
 
-            while (Alive)
+            while (alive)
             {
 
 
-                Console.WriteLine("Welcome to the Basic Calculator");//Just text,this will not b treated as code - notes for coder
-                Console.WriteLine(" ");
-                Console.WriteLine("What action would you like to perform?");
-                Console.WriteLine(" ");
+                Console.WriteLine("Welcome to the Basic Calculator\nWhat action would you like to perform?\n");//Just text,this will not b treated as code - notes for coder
                 Console.WriteLine("1: Addition");
                 Console.WriteLine("2: Substraction");
                 Console.WriteLine("3: Multiplication");
                 Console.WriteLine("4: Division");
+                Console.WriteLine("5: Exit");
                 double action = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Please, enter you first number:");
                 double input_1 = Convert.ToInt32(Console.ReadLine());
@@ -52,6 +50,10 @@ namespace Calculator
                             result = Division(input_1, input_2);
                             break;
                         }
+                    case 5:
+                        alive = false;
+                        break;
+                       
 
                     default:
                         Console.WriteLine("I beg your pardon?");
@@ -97,6 +99,6 @@ namespace Calculator
             }
 
         }
-        
+            
     } 
 }
